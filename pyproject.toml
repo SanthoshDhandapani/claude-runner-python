@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "claude-runner"
-version = "0.1.0"
+name = "claude-runner-py"
+version = "0.1.1"
 description = "The easiest way to build AI agents with Claude. CLI, SDK, and Cloud — 5 lines to start."
 readme = "README.md"
 license = "MIT"

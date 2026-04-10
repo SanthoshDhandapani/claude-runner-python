@@ -1,6 +1,6 @@
 # claude-runner
 
-[![PyPI version](https://img.shields.io/pypi/v/claude-runner.svg)](https://pypi.org/project/claude-runner/)
+[![PyPI version](https://img.shields.io/pypi/v/claude-runner-py.svg)](https://pypi.org/project/claude-runner-py/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
@@ -9,6 +9,10 @@
 The official SDK is an engine 🔧 — claude-runner is the car 🚗.
 
 A thin, clean wrapper around the Anthropic SDK. Zero required dependencies.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SanthoshDhandapani/claude-runner-python/main/assets/demo-1-quickstart.gif" alt="claude-runner-py demo" width="700" />
+</p>
 
 ```python
 from claude_runner import Runner
@@ -24,13 +28,13 @@ Also available as a [TypeScript/npm package](https://github.com/SanthoshDhandapa
 
 ```bash
 # API Mode — no CLI needed, deploys anywhere
-pip install claude-runner[api]
+pip install claude-runner-py[api]
 
 # Agent Mode — full Claude Code power (needs CLI)
-pip install claude-runner[agent]
+pip install claude-runner-py[agent]
 
 # Everything
-pip install claude-runner[all]
+pip install claude-runner-py[all]
 ```
 
 ## Quick Start
@@ -53,6 +57,10 @@ asyncio.run(main())
 ```
 
 ### Streaming
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SanthoshDhandapani/claude-runner-python/main/assets/demo-2-streaming.gif" alt="claude-runner-py streaming demo" width="700" />
+</p>
 
 ```python
 async for event in runner.stream("Refactor the auth module"):
