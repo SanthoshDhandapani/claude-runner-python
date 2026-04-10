@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
-    { name = "Santhosh Dhandapani", email = "san.itsnew@gmail.com" },
+    { name = "Santhosh Dhandapani" },
 ]
 keywords = ["claude", "agent", "ai", "sdk", "mcp", "anthropic", "runner", "sandbox"]
 classifiers = [

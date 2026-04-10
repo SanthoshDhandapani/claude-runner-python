@@ -144,9 +144,17 @@ class ApiRunner:
 
                 response = await stream.get_final_message()
                 stop_reason = response.stop_reason
-                assistant_content = [
-                    block.model_dump() for block in response.content
-                ]
+                # Serialize content blocks — only keep API-safe fields
+                for block in response.content:
+                    if block.type == "text":
+                        assistant_content.append({"type": "text", "text": block.text})
+                    elif block.type == "tool_use":
+                        assistant_content.append({
+                            "type": "tool_use",
+                            "id": block.id,
+                            "name": block.name,
+                            "input": block.input,
+                        })
 
                 # Track usage
                 if response.usage:
